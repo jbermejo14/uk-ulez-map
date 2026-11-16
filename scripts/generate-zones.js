@@ -21,6 +21,10 @@ const zones = [
     pcnAmount: "£180",
     pcnDiscounted: "£90",
     pcnRule: "PCN is £180, reduced to £90 if paid within 14 days. Must be paid by midnight on the third day following travel.",
+    sourceUrl: "https://tfl.gov.uk/modes/driving/ultra-low-emission-zone",
+    officialCheckerUrl: "https://tfl.gov.uk/modes/driving/check-your-vehicle/",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 51.5074,
       lng: -0.1278,
@@ -69,7 +73,7 @@ const zones = [
       },
       {
         question: "How do I check if my car is Euro 4 or Euro 6?",
-        answer: "You can use our instant plate checker above, or look at section V.5 of your vehicle's V5C logbook, which lists the exact Euro emission standard."
+        answer: "You can use our vehicle checker above, or look at section V.5 of your vehicle's V5C logbook, which lists the exact Euro emission standard."
       },
       {
         question: "Are residents inside the ULEZ exempt from the charge?",
@@ -96,6 +100,10 @@ const zones = [
     pcnAmount: "£180",
     pcnDiscounted: "£90",
     pcnRule: "PCN is £180, halved to £90 if paid within 14 days. Must pay by midnight on the third day (£17.50 if paying after day of travel).",
+    sourceUrl: "https://tfl.gov.uk/modes/driving/congestion-charge",
+    officialCheckerUrl: "https://tfl.gov.uk/modes/driving/check-your-vehicle/",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 51.5085,
       lng: -0.1257,
@@ -162,6 +170,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days. Must be paid within 6 days following the day of travel.",
+    sourceUrl: "https://www.birmingham.gov.uk/caz",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 52.4862,
       lng: -1.8904,
@@ -228,6 +240,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days. Must be paid within 6 days after travel.",
+    sourceUrl: "https://www.bristol.gov.uk/residents/streets-travel/clean-air-zone",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 51.4545,
       lng: -2.5879,
@@ -294,6 +310,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days. Must pay within 6 days of travel.",
+    sourceUrl: "https://www.bathnes.gov.uk/bath-clean-air-zone",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 51.3811,
       lng: -2.3590,
@@ -359,6 +379,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days. Must pay within 6 days of travel.",
+    sourceUrl: "https://www.sheffield.gov.uk/clean-air-zone",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 53.3811,
       lng: -1.4701,
@@ -420,6 +444,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days.",
+    sourceUrl: "https://www.breathe-cleanair.com",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 54.9783,
       lng: -1.6178,
@@ -481,6 +509,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days.",
+    sourceUrl: "https://www.bradford.gov.uk/breathe-better-bradford/what-is-the-clean-air-programme/what-is-the-clean-air-zone/",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 53.7960,
       lng: -1.7594,
@@ -542,6 +574,10 @@ const zones = [
     pcnAmount: "£120",
     pcnDiscounted: "£60",
     pcnRule: "PCN is £120, reduced to £60 if paid within 14 days.",
+    sourceUrl: "https://travel.portsmouth.gov.uk/schemes/clean-air-zone/",
+    officialCheckerUrl: "https://www.gov.uk/clean-air-zones",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 50.8036,
       lng: -1.0850,
@@ -603,6 +639,12 @@ const zones = [
     pcnAmount: "£60",
     pcnDiscounted: "£30",
     pcnRule: "PCN is £60, reduced to £30 if paid within 14 days.",
+    sourceUrl: "https://www.oxfordshire.gov.uk/residents/roads-and-transport/oxford-zero-emission-zone-zez",
+    officialCheckerUrl: "https://www.oxfordshire.gov.uk/residents/roads-and-transport/oxford-zero-emission-zone-zez",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [
+      "Exact future date for full city-wide ZEZ expansion beyond the pilot streets"
+    ],
     coordinates: {
       lat: 51.7520,
       lng: -1.2577,
@@ -664,6 +706,10 @@ const zones = [
     pcnAmount: "£60 (Doubles up to £480 / £960)",
     pcnDiscounted: "£30",
     pcnRule: "PCN is £60 (halved to £30 if paid within 14 days). Penalty doubles for each subsequent breach within 90 days: £120, £240, up to £480 cap for cars/vans, £960 for HGVs.",
+    sourceUrl: "https://www.glasgow.gov.uk/lez",
+    officialCheckerUrl: "https://www.lowemissionzones.scot",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 55.8642,
       lng: -4.2518,
@@ -729,6 +775,10 @@ const zones = [
     pcnAmount: "£60 (Doubles up to £480 / £960)",
     pcnDiscounted: "£30",
     pcnRule: "PCN is £60 (halved to £30 if paid within 14 days). Penalty doubles for repeat entries within 90 days up to £480 for cars/vans.",
+    sourceUrl: "https://www.edinburgh.gov.uk/lez",
+    officialCheckerUrl: "https://www.lowemissionzones.scot",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 55.9533,
       lng: -3.1883,
@@ -790,6 +840,10 @@ const zones = [
     pcnAmount: "£60 (Doubles up to £480)",
     pcnDiscounted: "£30",
     pcnRule: "PCN is £60 (halved to £30 if paid within 14 days). Doubles for repeat violations.",
+    sourceUrl: "https://www.dundeecity.gov.uk/service-area/city-development/sustainable-transport-and-roads/low-emission-zone",
+    officialCheckerUrl: "https://www.lowemissionzones.scot",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 56.4620,
       lng: -2.9707,
@@ -851,6 +905,10 @@ const zones = [
     pcnAmount: "£60 (Doubles up to £480)",
     pcnDiscounted: "£30",
     pcnRule: "PCN is £60 (halved to £30 if paid within 14 days). Doubles for repeat violations within 90 days.",
+    sourceUrl: "https://www.aberdeencity.gov.uk/services/roads-transport-and-parking/low-emission-zone",
+    officialCheckerUrl: "https://www.lowemissionzones.scot",
+    lastVerified: "2026-11-16",
+    unverifiedFields: [],
     coordinates: {
       lat: 57.1497,
       lng: -2.0943,
@@ -895,10 +953,7 @@ const zones = [
   }
 ];
 
-const targetDir = path.join(__dirname, 'data');
-if (!fs.existsSync(targetDir)) {
-  fs.mkdirSync(targetDir, { recursive: true });
-}
-
-fs.writeFileSync(path.join(targetDir, 'zones.json'), JSON.stringify(zones, null, 2), 'utf8');
-console.log(`Successfully generated data/zones.json with ${zones.length} zones.`);
+// Writes directly and only to data/zones.json
+const targetFile = path.resolve(__dirname, '..', 'data', 'zones.json');
+fs.writeFileSync(targetFile, JSON.stringify(zones, null, 2), 'utf8');
+console.log(`Successfully generated single source of truth ${targetFile} with ${zones.length} verified zones.`);

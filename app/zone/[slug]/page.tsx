@@ -151,9 +151,29 @@ export default function ZonePage({ params }: ZonePageProps) {
               {zone.typeLabel}
             </span>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-              Status: {zone.status} (2026 Verified)
+              Status: {zone.status}
             </span>
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-slate-300 dark:border-zinc-700">
+              Verificado: {zone.lastVerified}
+            </span>
+            <a
+              href={zone.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary hover:underline flex items-center gap-1 border border-primary/20"
+              title="Consultar fuente oficial del operador"
+            >
+              <span>Fuente Oficial</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
+
+          {zone.unverifiedFields && zone.unverifiedFields.length > 0 && (
+            <div className="mb-4 p-3 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-300 dark:border-amber-700/50 text-xs text-amber-800 dark:text-amber-300 flex items-center gap-2">
+              <span className="font-bold">Nota de verificación:</span>
+              <span>Campos pendientes de confirmación oficial: {zone.unverifiedFields.join(", ")}</span>
+            </div>
+          )}
 
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-zinc-900 dark:text-white tracking-tight leading-tight">
             {zone.name} Map, Daily Charges & Vehicle Checker (2026)
