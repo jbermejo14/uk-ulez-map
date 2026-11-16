@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "london-ulez",
+    "slug": "london-ulez",
+    "name": "Greater London Ultra Low Emission Zone (ULEZ)",
+    "shortName": "London ULEZ",
+    "type": "ULEZ",
+    "typeLabel": "Ultra Low Emission Zone",
+    "city": "London",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 7 days a week, every day of the year (except Christmas Day 25 December)",
+    "enforcementMethod": "Automatic Number Plate Recognition (ANPR) cameras across all Greater London borders",
+    "dailyChargeCar": "£12.50",
+    "dailyChargeVan": "£12.50",
+    "dailyChargeHGV": "£100 - £300 (Under London LEZ Scheme)",
+    "dailyChargeMotorcycle": "£12.50",
+    "pcnAmount": "£180",
+    "pcnDiscounted": "£90",
+    "pcnRule": "PCN is £180, reduced to £90 if paid within 14 days. Must be paid by midnight on the third day following travel.",
+    "coordinates": {
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "zoom": 10
+    },
+    "standards": {
+      "petrol": "Euro 4 (NOx) - Generally vehicles registered with the DVLA after 1 January 2006",
+      "diesel": "Euro 6 (NOx and PM) - Generally vehicles registered after 1 September 2015 (65 plate)",
+      "electric": "100% Zero-emission vehicles (Battery Electric & Hydrogen Fuel Cell) are completely exempt (£0)",
+      "hybrid": "Must meet relevant Euro standard (Euro 4 for petrol-hybrid, Euro 6 for diesel-hybrid)",
+      "motorcycle": "Euro 3 (registered with DVLA after 1 July 2007)"
+    },
+    "summary": "The London ULEZ covers all 32 London boroughs and the City of London up to the administrative boundary. Non-compliant vehicles must pay £12.50 daily.",
+    "description": "The Ultra Low Emission Zone (ULEZ) operates across all Greater London boroughs to help clean up London's air. If your vehicle doesn't meet the strict ULEZ emission standards and isn't exempt, you need to pay a daily charge of £12.50 to drive within the zone. The zone operates 24/7 every day of the year, except Christmas Day.",
+    "exemptions": [
+      "Wheelchair accessible PHVs and designated disabled tax class vehicles (grace period to 2027)",
+      "Historic vehicles registered with DVLA under the 'historic tax class' (built before 1 January 1984 / 40+ years old)",
+      "100% Battery Electric Vehicles (EVs)",
+      "Showman's vehicles custom modified",
+      "NHS patient reimbursement for clinically vulnerable patients attending hospital"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Petrol Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£12.50",
+        "notes": "Free if Euro 4 or newer (post-2006)"
+      },
+      {
+        "vehicleType": "Diesel Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£12.50",
+        "notes": "Free if Euro 6 or newer (post-Sept 2015 / 65 plate)"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from ULEZ charges"
+      },
+      {
+        "vehicleType": "Van / LCV (up to 3.5t)",
+        "isCharged": true,
+        "dailyRate": "£12.50",
+        "notes": "Petrol Euro 4 / Diesel Euro 6 required"
+      },
+      {
+        "vehicleType": "Motorcycle / Moped",
+        "isCharged": true,
+        "dailyRate": "£12.50",
+        "notes": "Free if Euro 3 or newer (post-July 2007)"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach (>3.5t)",
+        "isCharged": true,
+        "dailyRate": "£100 - £300",
+        "notes": "Covered by London LEZ standards (Euro VI required)"
+      }
+    ],
+    "paymentUrl": "https://tfl.gov.uk/modes/driving/ultra-low-emission-zone/ulez-payments",
+    "paymentWindow": "Pay in advance, on the day of travel, or up to midnight on the third day after travel",
+    "polygon": [
+      [
+        51.6918,
+        -0.1802
+      ],
+      [
+        51.6854,
+        -0.0754
+      ],
+      [
+        51.6502,
+        0.0543
+      ],
+      [
+        51.6023,
+        0.1983
+      ],
+      [
+        51.5204,
+        0.2521
+      ],
+      [
+        51.4612,
+        0.2185
+      ],
+      [
+        51.3915,
+        0.1342
+      ],
+      [
+        51.3321,
+        0.0521
+      ],
+      [
+        51.2942,
+        -0.0612
+      ],
+      [
+        51.3215,
+        -0.1742
+      ],
+      [
+        51.3712,
+        -0.2854
+      ],
+      [
+        51.4285,
+        -0.4215
+      ],
+      [
+        51.5123,
+        -0.4985
+      ],
+      [
+        51.5891,
+        -0.4721
+      ],
+      [
+        51.6512,
+        -0.3621
+      ],
+      [
+        51.6918,
+        -0.1802
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Does the London ULEZ apply 24 hours a day?",
+        "answer": "Yes, the ULEZ operates 24 hours a day, midnight to midnight, 7 days a week, every day of the year except Christmas Day (25 December)."
+      },
+      {
+        "question": "What happens if I cross the ULEZ boundary after midnight?",
+        "answer": "The charging period runs from midnight to midnight. If you drive within the ULEZ across midnight (e.g. 23:45 to 00:30), you will need to pay two daily charges (£25.00 total) if your vehicle is non-compliant."
+      },
+      {
+        "question": "How do I check if my car is Euro 4 or Euro 6?",
+        "answer": "You can use our instant plate checker above, or look at section V.5 of your vehicle's V5C logbook, which lists the exact Euro emission standard."
+      },
+      {
+        "question": "Are residents inside the ULEZ exempt from the charge?",
+        "answer": "No. There are no general resident exemptions or discounts for living inside the Greater London ULEZ. If your vehicle does not meet the standards, you must pay the £12.50 daily fee whenever you drive it on public roads."
+      }
+    ]
+  },
+  {
+    "id": "london-congestion-charge",
+    "slug": "london-congestion-charge",
+    "name": "London Congestion Charge",
+    "shortName": "London Congestion",
+    "type": "CONGESTION",
+    "typeLabel": "Congestion Charge Zone",
+    "city": "Central London",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "07:00 to 18:00 Monday to Friday; 12:00 to 18:00 Saturday, Sunday and Bank Holidays (no charge between Christmas Day and New Year's Day bank holiday inclusive)",
+    "enforcementMethod": "High-density ANPR camera ring around Central London",
+    "dailyChargeCar": "£15.00",
+    "dailyChargeVan": "£15.00",
+    "dailyChargeHGV": "£15.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£180",
+    "pcnDiscounted": "£90",
+    "pcnRule": "PCN is £180, halved to £90 if paid within 14 days. Must pay by midnight on the third day (£17.50 if paying after day of travel).",
+    "coordinates": {
+      "lat": 51.5085,
+      "lng": -0.1257,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Standard £15 daily fee applies regardless of Euro emission standard",
+      "diesel": "Standard £15 daily fee applies regardless of Euro emission standard",
+      "electric": "Cleaner Vehicle Discount: 100% discount for registered zero-emission vehicles (£10/year TfL registration)",
+      "hybrid": "Plugin-hybrids are no longer exempt; must pay full £15 daily rate",
+      "motorcycle": "Two-wheeled motorbikes and mopeds are completely exempt (£0)"
+    },
+    "summary": "Central London traffic reduction charge of £15/day covering Soho, the City, Westminster, and Southwark during operating hours.",
+    "description": "The London Congestion Charge is an 8-square-mile zone in Central London designed to reduce traffic congestion and air pollution. Unlike ULEZ (which is 24/7 and emissions-based), the Congestion Charge applies to almost all combustion-engine vehicles entering the zone during peak daytime hours.",
+    "exemptions": [
+      "Zero-emission battery electric vehicles registered with TfL under the Cleaner Vehicle Discount",
+      "Two-wheeled motorcycles, mopeds and pedal bicycles",
+      "Blue Badge holders (100% discount upon TfL registration)",
+      "Residents within the Congestion Charge zone get a 90% discount with an active permit",
+      "Emergency service and military vehicles"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Petrol Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£15.00",
+        "notes": "Applies during charging hours regardless of Euro standard"
+      },
+      {
+        "vehicleType": "Diesel Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£15.00",
+        "notes": "Applies during charging hours regardless of Euro standard"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% discount with TfL registration (ends Dec 2025/2026 reform)"
+      },
+      {
+        "vehicleType": "Van / LCV",
+        "isCharged": true,
+        "dailyRate": "£15.00",
+        "notes": "Standard commercial vans must pay full rate"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Completely exempt from congestion charging"
+      },
+      {
+        "vehicleType": "HGV / Bus",
+        "isCharged": true,
+        "dailyRate": "£15.00",
+        "notes": "Standard daily fee applies"
+      }
+    ],
+    "paymentUrl": "https://tfl.gov.uk/modes/driving/congestion-charge",
+    "paymentWindow": "Pay in advance or on the day for £15; pay up to the third day after travel for £17.50",
+    "polygon": [
+      [
+        51.5298,
+        -0.1585
+      ],
+      [
+        51.5312,
+        -0.1234
+      ],
+      [
+        51.5256,
+        -0.0965
+      ],
+      [
+        51.5212,
+        -0.0768
+      ],
+      [
+        51.5076,
+        -0.0712
+      ],
+      [
+        51.4985,
+        -0.0874
+      ],
+      [
+        51.4889,
+        -0.1132
+      ],
+      [
+        51.4842,
+        -0.1298
+      ],
+      [
+        51.4932,
+        -0.1512
+      ],
+      [
+        51.5032,
+        -0.1624
+      ],
+      [
+        51.5178,
+        -0.1654
+      ],
+      [
+        51.5298,
+        -0.1585
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Is the Congestion Charge separate from ULEZ?",
+        "answer": "Yes. They are two separate schemes. If you drive a non-compliant vehicle in Central London during Congestion Charge hours, you must pay both the £12.50 ULEZ fee AND the £15.00 Congestion Charge fee (£27.50 total per day)."
+      },
+      {
+        "question": "What are the exact Congestion Charge operating hours?",
+        "answer": "Monday to Friday: 07:00 – 18:00. Saturday, Sunday and Bank Holidays: 12:00 – 18:00. Outside these hours, driving in Central London is free from Congestion Charge (though ULEZ still applies 24/7)."
+      }
+    ]
+  },
+  {
+    "id": "birmingham-clean-air-zone",
+    "slug": "birmingham-clean-air-zone",
+    "name": "Birmingham Clean Air Zone (Class D)",
+    "shortName": "Birmingham CAZ",
+    "type": "CAZ_D",
+    "typeLabel": "Clean Air Zone (Class D)",
+    "city": "Birmingham",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "Over 67 ANPR camera sites across the A4540 Middleway ring road boundary",
+    "dailyChargeCar": "£8.00",
+    "dailyChargeVan": "£8.00",
+    "dailyChargeHGV": "£50.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days. Must be paid within 6 days following the day of travel.",
+    "coordinates": {
+      "lat": 52.4862,
+      "lng": -1.8904,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Euro 4 (generally registered 2006 onwards)",
+      "diesel": "Euro 6 (generally registered September 2015 onwards)",
+      "electric": "100% Zero-emission vehicles (EVs) are completely free",
+      "hybrid": "Petrol hybrids Euro 4+; diesel hybrids Euro 6+",
+      "motorcycle": "All mopeds and motorcycles are exempt (£0)"
+    },
+    "summary": "Birmingham Class D CAZ covers all roads inside the A4540 Middleway ring road. Non-compliant cars & vans pay £8/day.",
+    "description": "Birmingham's Clean Air Zone (Class D) covers all roads inside the A4540 Middleway ring road (the ring road itself is not charged). It operates 24/7 all year round. Vehicles that do not meet Euro 4 (petrol) or Euro 6 (diesel) standards must pay a daily charge of £8 (cars and LGVs) or £50 (HGVs, buses and coaches).",
+    "exemptions": [
+      "Disabled passenger tax class and Blue Badge holder vehicles registered locally",
+      "Historic vehicles (tax class 'historic vehicle', over 40 years old)",
+      "Specialist emergency vehicles and community transport",
+      "Pure electric vehicles and hydrogen fuel cell vehicles",
+      "Two-wheeled motorcycles and mopeds"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Petrol Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£8.00",
+        "notes": "Free if Euro 4 or newer (post-2006)"
+      },
+      {
+        "vehicleType": "Diesel Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£8.00",
+        "notes": "Free if Euro 6 or newer (post-Sept 2015)"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Birmingham CAZ"
+      },
+      {
+        "vehicleType": "Van / LGV",
+        "isCharged": true,
+        "dailyRate": "£8.00",
+        "notes": "Applies to non-compliant commercial light vehicles"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Motorcycles are exempt in Birmingham"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£50.00",
+        "notes": "Applies to non-compliant heavy vehicles"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay 6 days before travel, on the day, or up to 6 days after travel",
+    "polygon": [
+      [
+        52.4965,
+        -1.9124
+      ],
+      [
+        52.4978,
+        -1.8842
+      ],
+      [
+        52.4895,
+        -1.8654
+      ],
+      [
+        52.4742,
+        -1.8682
+      ],
+      [
+        52.4665,
+        -1.8885
+      ],
+      [
+        52.4682,
+        -1.9085
+      ],
+      [
+        52.4774,
+        -1.9212
+      ],
+      [
+        52.4912,
+        -1.9205
+      ],
+      [
+        52.4965,
+        -1.9124
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Can I drive on the Birmingham Middleway ring road without paying?",
+        "answer": "Yes! The A4540 Middleway ring road itself is not part of the Clean Air Zone. You only incur a charge if you turn off the ring road into the city centre zone."
+      },
+      {
+        "question": "Where do I pay the Birmingham Clean Air Zone charge?",
+        "answer": "Payments must be made through the official central UK Government Clean Air Zone payment service at gov.uk/clean-air-zones."
+      }
+    ]
+  },
+  {
+    "id": "bristol-clean-air-zone",
+    "slug": "bristol-clean-air-zone",
+    "name": "Bristol Clean Air Zone (Class D)",
+    "shortName": "Bristol CAZ",
+    "type": "CAZ_D",
+    "typeLabel": "Clean Air Zone (Class D)",
+    "city": "Bristol",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 7 days a week, 365 days a year",
+    "enforcementMethod": "ANPR cameras across central Bristol and Portway access corridor",
+    "dailyChargeCar": "£9.00",
+    "dailyChargeVan": "£9.00",
+    "dailyChargeHGV": "£100.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days. Must be paid within 6 days after travel.",
+    "coordinates": {
+      "lat": 51.4545,
+      "lng": -2.5879,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Euro 4 (generally registered 2006 onwards)",
+      "diesel": "Euro 6 (generally registered September 2015 onwards)",
+      "electric": "100% Zero-emission vehicles (EVs) are completely free",
+      "hybrid": "Petrol hybrids Euro 4+; diesel hybrids Euro 6+",
+      "motorcycle": "All motorcycles and mopeds are exempt (£0)"
+    },
+    "summary": "Bristol Class D CAZ covers central Bristol, Cumberland Basin, and the Portway. Non-compliant cars & vans pay £9/day.",
+    "description": "Bristol's Clean Air Zone operates 24/7 across the city centre, parts of Redcliffe, Clifton, and the Portway (A4). Like Birmingham, Bristol is a Class D zone, meaning private passenger cars that do not meet emissions standards are charged £9 per day.",
+    "exemptions": [
+      "Disabled tax class and registered blue badge exemptions (local registration required)",
+      "Historic vehicles over 40 years old",
+      "Fully electric and zero-emission vehicles",
+      "Two-wheeled motorbikes and mopeds",
+      "Emergency service vehicles"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Petrol Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£9.00",
+        "notes": "Free if Euro 4 or newer"
+      },
+      {
+        "vehicleType": "Diesel Car / SUV",
+        "isCharged": true,
+        "dailyRate": "£9.00",
+        "notes": "Free if Euro 6 or newer"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Bristol CAZ"
+      },
+      {
+        "vehicleType": "Van / LCV",
+        "isCharged": true,
+        "dailyRate": "£9.00",
+        "notes": "Non-compliant light commercial vehicles pay £9"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Exempt in Bristol"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£100.00",
+        "notes": "Non-compliant heavy commercial vehicles pay £100"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay up to 6 days before, on the day, or up to 6 days after travel",
+    "polygon": [
+      [
+        51.4642,
+        -2.6185
+      ],
+      [
+        51.4674,
+        -2.5921
+      ],
+      [
+        51.4612,
+        -2.5714
+      ],
+      [
+        51.4485,
+        -2.5695
+      ],
+      [
+        51.4398,
+        -2.5854
+      ],
+      [
+        51.4412,
+        -2.6042
+      ],
+      [
+        51.4485,
+        -2.6285
+      ],
+      [
+        51.4585,
+        -2.6321
+      ],
+      [
+        51.4642,
+        -2.6185
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Does the Bristol CAZ cover the Portway and Brunel Way?",
+        "answer": "Yes, sections of the Portway (A4) and Cumberland Basin / Brunel Way are included in the Bristol CAZ. If your vehicle is non-compliant, you will trigger the £9 charge."
+      },
+      {
+        "question": "How long do I have to pay the Bristol CAZ charge?",
+        "answer": "You have 6 days after your journey to make the payment via gov.uk/clean-air-zones."
+      }
+    ]
+  },
+  {
+    "id": "bath-clean-air-zone",
+    "slug": "bath-clean-air-zone",
+    "name": "Bath Clean Air Zone (Class C)",
+    "shortName": "Bath CAZ",
+    "type": "CAZ_C",
+    "typeLabel": "Clean Air Zone (Class C)",
+    "city": "Bath",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 7 days a week, 365 days a year",
+    "enforcementMethod": "ANPR cameras on all arterial approaches to Bath city centre",
+    "dailyChargeCar": "£0.00 (Exempt)",
+    "dailyChargeVan": "£9.00",
+    "dailyChargeHGV": "£100.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days. Must pay within 6 days of travel.",
+    "coordinates": {
+      "lat": 51.3811,
+      "lng": -2.359,
+      "zoom": 14
+    },
+    "standards": {
+      "petrol": "Euro 4 (applicable to commercial vans, taxis, and HGVs only)",
+      "diesel": "Euro 6 (applicable to commercial vans, taxis, and HGVs only)",
+      "electric": "Zero-emission vehicles are completely exempt",
+      "hybrid": "Follows relevant Euro standard for commercial vehicles",
+      "motorcycle": "All private cars and motorcycles are exempt"
+    },
+    "summary": "Bath Class C CAZ charges non-compliant commercial vans, taxis, and HGVs. Private passenger cars are completely EXEMPT.",
+    "description": "Bath operates a Class C Clean Air Zone. A major advantage for motorists: PRIVATE PASSENGER CARS AND MOTORCYCLES ARE COMPLETELY EXEMPT (£0), regardless of fuel type or age. Only commercial vehicles (taxis, private hire, vans, LGVs, buses, coaches, and HGVs) that do not meet Euro 6 (diesel) or Euro 4 (petrol) standards are charged.",
+    "exemptions": [
+      "ALL PRIVATE PASSENGER CARS (Euro standards do not apply to private non-commercial cars)",
+      "All motorcycles and mopeds",
+      "Emergency service and military vehicles",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 40 years old"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Private Passenger Car",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Bath CAZ regardless of age/fuel"
+      },
+      {
+        "vehicleType": "Van / LGV (Commercial)",
+        "isCharged": true,
+        "dailyRate": "£9.00",
+        "notes": "Non-compliant commercial light vehicles pay £9/day"
+      },
+      {
+        "vehicleType": "Taxi / Private Hire",
+        "isCharged": true,
+        "dailyRate": "£9.00",
+        "notes": "Non-compliant licensed taxis pay £9/day"
+      },
+      {
+        "vehicleType": "Electric Vehicle (Any)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Exempt in Bath"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£100.00",
+        "notes": "Non-compliant heavy commercial vehicles pay £100/day"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay within 6 days after driving in the zone",
+    "polygon": [
+      [
+        51.3945,
+        -2.3785
+      ],
+      [
+        51.3985,
+        -2.3512
+      ],
+      [
+        51.3895,
+        -2.3385
+      ],
+      [
+        51.3742,
+        -2.3412
+      ],
+      [
+        51.3685,
+        -2.3654
+      ],
+      [
+        51.3745,
+        -2.3842
+      ],
+      [
+        51.3885,
+        -2.3895
+      ],
+      [
+        51.3945,
+        -2.3785
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Do I have to pay in Bath if I drive a private car?",
+        "answer": "No. Bath operates a Class C Clean Air Zone, meaning all private passenger cars are completely exempt from the charge, regardless of age, fuel type or emissions standard."
+      },
+      {
+        "question": "What vehicles have to pay the Bath Clean Air Zone charge?",
+        "answer": "Only non-compliant taxis, private hire vehicles, commercial vans, minibuses, buses, coaches, and HGVs are subject to charges in Bath."
+      }
+    ]
+  },
+  {
+    "id": "sheffield-clean-air-zone",
+    "slug": "sheffield-clean-air-zone",
+    "name": "Sheffield Clean Air Zone (Class C)",
+    "shortName": "Sheffield CAZ",
+    "type": "CAZ_C",
+    "typeLabel": "Clean Air Zone (Class C)",
+    "city": "Sheffield",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 7 days a week, 365 days a year",
+    "enforcementMethod": "ANPR cameras monitoring Sheffield Inner Ring Road (A61) and city centre",
+    "dailyChargeCar": "£0.00 (Exempt)",
+    "dailyChargeVan": "£10.00",
+    "dailyChargeHGV": "£50.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days. Must pay within 6 days of travel.",
+    "coordinates": {
+      "lat": 53.3811,
+      "lng": -1.4701,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Euro 4 (commercial vehicles only)",
+      "diesel": "Euro 6 (commercial vehicles only)",
+      "electric": "Zero-emission vehicles are completely free",
+      "hybrid": "Follows relevant Euro standard for commercial vehicles",
+      "motorcycle": "All private cars and motorcycles are exempt"
+    },
+    "summary": "Sheffield Class C CAZ charges non-compliant commercial vans (£10/day) and HGVs (£50/day). Private cars are EXEMPT.",
+    "description": "Sheffield's Clean Air Zone is Class C, covering the Inner Ring Road (A61) and the city centre, extending up the Sheffield Parkway to the roundabout at Prince of Wales Road. Private passenger cars and motorbikes are completely EXEMPT from all charges.",
+    "exemptions": [
+      "ALL PRIVATE PASSENGER CARS AND MOTORCYCLES",
+      "Fully electric and hydrogen commercial vehicles",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 40 years old",
+      "Emergency service vehicles"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Private Passenger Car",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Sheffield CAZ"
+      },
+      {
+        "vehicleType": "Van / LGV",
+        "isCharged": true,
+        "dailyRate": "£10.00",
+        "notes": "Non-compliant light commercial vans pay £10/day"
+      },
+      {
+        "vehicleType": "Taxi / Private Hire",
+        "isCharged": true,
+        "dailyRate": "£10.00",
+        "notes": "Non-compliant taxis pay £10/day"
+      },
+      {
+        "vehicleType": "Electric Vehicle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£50.00",
+        "notes": "Non-compliant HGVs and buses pay £50/day"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay up to 6 days before, on the day, or up to 6 days after travel",
+    "polygon": [
+      [
+        53.3912,
+        -1.4854
+      ],
+      [
+        53.3942,
+        -1.4612
+      ],
+      [
+        53.3885,
+        -1.4421
+      ],
+      [
+        53.3754,
+        -1.4512
+      ],
+      [
+        53.3695,
+        -1.4742
+      ],
+      [
+        53.3742,
+        -1.4921
+      ],
+      [
+        53.3854,
+        -1.4965
+      ],
+      [
+        53.3912,
+        -1.4854
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Are private cars charged in the Sheffield Clean Air Zone?",
+        "answer": "No. Private cars and motorbikes never pay in Sheffield. Only older, higher-polluting commercial vehicles (vans, LGVs, taxis, buses, coaches, and HGVs) are charged."
+      }
+    ]
+  },
+  {
+    "id": "tyneside-newcastle-gateshead-caz",
+    "slug": "tyneside-newcastle-gateshead-caz",
+    "name": "Newcastle & Gateshead (Tyneside) Clean Air Zone (Class C)",
+    "shortName": "Newcastle CAZ",
+    "type": "CAZ_C",
+    "typeLabel": "Clean Air Zone (Class C)",
+    "city": "Newcastle & Gateshead",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 7 days a week, 365 days a year",
+    "enforcementMethod": "ANPR cameras monitoring city centre and Tyne Bridge corridor",
+    "dailyChargeCar": "£0.00 (Exempt)",
+    "dailyChargeVan": "£12.50",
+    "dailyChargeHGV": "£50.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days.",
+    "coordinates": {
+      "lat": 54.9783,
+      "lng": -1.6178,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Euro 4 (commercial vehicles only)",
+      "diesel": "Euro 6 (commercial vehicles only)",
+      "electric": "Zero-emission vehicles are completely free",
+      "hybrid": "Follows relevant Euro standard for commercial vehicles",
+      "motorcycle": "All private cars and motorcycles are exempt"
+    },
+    "summary": "Newcastle & Gateshead Class C CAZ charges non-compliant commercial vans (£12.50/day) and HGVs (£50/day). Private cars are EXEMPT.",
+    "description": "The Tyneside Clean Air Zone covers Newcastle city centre, routes over the Tyne, Swing, High Level and Redheugh bridges. Private cars and motorbikes are EXEMPT. Non-compliant commercial vans, LGVs and taxis pay £12.50 per day, while HGVs, buses and coaches pay £50.",
+    "exemptions": [
+      "ALL PRIVATE PASSENGER CARS AND MOTORCYCLES",
+      "Electric and zero-emission commercial vehicles",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 40 years old",
+      "Specialist emergency vehicles"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Private Passenger Car",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Tyneside CAZ"
+      },
+      {
+        "vehicleType": "Van / LGV",
+        "isCharged": true,
+        "dailyRate": "£12.50",
+        "notes": "Non-compliant commercial vans pay £12.50/day"
+      },
+      {
+        "vehicleType": "Taxi / Private Hire",
+        "isCharged": true,
+        "dailyRate": "£12.50",
+        "notes": "Non-compliant taxis pay £12.50/day"
+      },
+      {
+        "vehicleType": "Electric Vehicle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£50.00",
+        "notes": "Non-compliant heavy commercial vehicles pay £50/day"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay within 6 days after travel via gov.uk",
+    "polygon": [
+      [
+        54.9862,
+        -1.6321
+      ],
+      [
+        54.9895,
+        -1.6054
+      ],
+      [
+        54.9785,
+        -1.5942
+      ],
+      [
+        54.9654,
+        -1.6054
+      ],
+      [
+        54.9621,
+        -1.6285
+      ],
+      [
+        54.9742,
+        -1.6398
+      ],
+      [
+        54.9862,
+        -1.6321
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Does the Tyne Bridge have Clean Air Zone cameras?",
+        "answer": "Yes, the Tyne Bridge approach is part of the Newcastle & Gateshead Clean Air Zone. However, private passenger cars are exempt and will not be charged."
+      }
+    ]
+  },
+  {
+    "id": "bradford-clean-air-zone",
+    "slug": "bradford-clean-air-zone",
+    "name": "Bradford Clean Air Zone (Class C+)",
+    "shortName": "Bradford CAZ",
+    "type": "CAZ_C",
+    "typeLabel": "Clean Air Zone (Class C+)",
+    "city": "Bradford",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "Over 300 ANPR cameras covering inner ring road and Shipley corridor",
+    "dailyChargeCar": "£0.00 (Exempt)",
+    "dailyChargeVan": "£9.00",
+    "dailyChargeHGV": "£50.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days.",
+    "coordinates": {
+      "lat": 53.796,
+      "lng": -1.7594,
+      "zoom": 12
+    },
+    "standards": {
+      "petrol": "Euro 4 (commercial vehicles only)",
+      "diesel": "Euro 6 (commercial vehicles only)",
+      "electric": "Zero-emission vehicles are completely free",
+      "hybrid": "Follows relevant Euro standard for commercial vehicles",
+      "motorcycle": "All private cars and motorcycles are exempt"
+    },
+    "summary": "Bradford Class C+ CAZ charges non-compliant commercial vans (£9/day) and HGVs (£50/day). Private cars are EXEMPT.",
+    "description": "The Bradford Clean Air Zone is a Class C+ zone covering the Bradford outer ring road, city centre, Canal Road, Manningham Lane, and Shipley / Saltaire. Private cars and motorbikes are completely EXEMPT.",
+    "exemptions": [
+      "ALL PRIVATE PASSENGER CARS AND MOTORCYCLES",
+      "Electric and zero-emission vehicles",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 40 years old",
+      "Local business exemptions (subject to council permit)"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Private Passenger Car",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Bradford CAZ"
+      },
+      {
+        "vehicleType": "Van / Minibus",
+        "isCharged": true,
+        "dailyRate": "£9.00",
+        "notes": "Non-compliant commercial vans pay £9/day"
+      },
+      {
+        "vehicleType": "Taxi / Private Hire",
+        "isCharged": true,
+        "dailyRate": "£7.00",
+        "notes": "Non-compliant licensed hackney/private hire pay £7/day"
+      },
+      {
+        "vehicleType": "Electric Vehicle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£50.00",
+        "notes": "Non-compliant HGVs and buses pay £50/day"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay up to 6 days before or 6 days after travel",
+    "polygon": [
+      [
+        53.8421,
+        -1.7854
+      ],
+      [
+        53.8342,
+        -1.7512
+      ],
+      [
+        53.8054,
+        -1.7212
+      ],
+      [
+        53.7742,
+        -1.7385
+      ],
+      [
+        53.7654,
+        -1.7812
+      ],
+      [
+        53.7842,
+        -1.8154
+      ],
+      [
+        53.8124,
+        -1.8054
+      ],
+      [
+        53.8421,
+        -1.7854
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Do private residents pay the Bradford CAZ fee?",
+        "answer": "No, private cars are never charged in Bradford. Only commercial vehicles, vans, minibuses, HGVs, and taxis must comply."
+      }
+    ]
+  },
+  {
+    "id": "portsmouth-clean-air-zone",
+    "slug": "portsmouth-clean-air-zone",
+    "name": "Portsmouth Clean Air Zone (Class B)",
+    "shortName": "Portsmouth CAZ",
+    "type": "CAZ_B",
+    "typeLabel": "Clean Air Zone (Class B)",
+    "city": "Portsmouth",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "ANPR cameras across southwest Portsea Island",
+    "dailyChargeCar": "£0.00 (Exempt)",
+    "dailyChargeVan": "£0.00 (Exempt)",
+    "dailyChargeHGV": "£50.00",
+    "dailyChargeMotorcycle": "£0.00",
+    "pcnAmount": "£120",
+    "pcnDiscounted": "£60",
+    "pcnRule": "PCN is £120, reduced to £60 if paid within 14 days.",
+    "coordinates": {
+      "lat": 50.8036,
+      "lng": -1.085,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Euro 4 (commercial taxis and HGVs only)",
+      "diesel": "Euro 6 (commercial taxis and HGVs only)",
+      "electric": "Zero-emission vehicles are completely free",
+      "hybrid": "Follows relevant Euro standard for commercial vehicles",
+      "motorcycle": "All private cars, private vans, and motorcycles are exempt"
+    },
+    "summary": "Portsmouth Class B CAZ charges non-compliant taxis (£10/day) and HGVs/buses (£50/day). ALL private cars and private vans are EXEMPT.",
+    "description": "Portsmouth operates a Class B Clean Air Zone covering southwest Portsea Island (including Kingston Crescent, Fratton, and city centre). As a Class B zone, private passenger cars AND private commercial vans are completely EXEMPT from all charges.",
+    "exemptions": [
+      "ALL PRIVATE PASSENGER CARS",
+      "ALL STANDARD PRIVATE VANS AND LGVs",
+      "All motorcycles and mopeds",
+      "Electric and zero-emission vehicles",
+      "Emergency service vehicles"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Private Passenger Car",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Portsmouth CAZ"
+      },
+      {
+        "vehicleType": "Van / LGV (Private)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Class B CAZ exempts standard vans"
+      },
+      {
+        "vehicleType": "Taxi / Private Hire",
+        "isCharged": true,
+        "dailyRate": "£10.00",
+        "notes": "Non-compliant licensed taxis pay £10/day"
+      },
+      {
+        "vehicleType": "Electric Vehicle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt"
+      },
+      {
+        "vehicleType": "HGV / Bus / Coach",
+        "isCharged": true,
+        "dailyRate": "£50.00",
+        "notes": "Non-compliant HGVs, buses and coaches pay £50/day"
+      }
+    ],
+    "paymentUrl": "https://www.gov.uk/clean-air-zones",
+    "paymentWindow": "Pay up to 6 days before or 6 days after travel via gov.uk",
+    "polygon": [
+      [
+        50.8242,
+        -1.0954
+      ],
+      [
+        50.8254,
+        -1.0742
+      ],
+      [
+        50.8054,
+        -1.0695
+      ],
+      [
+        50.7895,
+        -1.0842
+      ],
+      [
+        50.7895,
+        -1.1085
+      ],
+      [
+        50.8085,
+        -1.1095
+      ],
+      [
+        50.8242,
+        -1.0954
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Do vans pay the Portsmouth Clean Air Zone charge?",
+        "answer": "No! Portsmouth is a Class B zone, which means private cars and standard vans are exempt. Only taxis, private hire vehicles, HGVs, and buses/coaches are charged."
+      }
+    ]
+  },
+  {
+    "id": "oxford-zero-emission-zone",
+    "slug": "oxford-zero-emission-zone",
+    "name": "Oxford Zero Emission Zone (ZEZ Pilot)",
+    "shortName": "Oxford ZEZ",
+    "type": "ZEZ",
+    "typeLabel": "Zero Emission Zone",
+    "city": "Oxford",
+    "region": "England",
+    "status": "Active",
+    "operatingHours": "07:00 to 19:00, 7 days a week, 365 days a year",
+    "enforcementMethod": "ANPR cameras monitoring designated central streets",
+    "dailyChargeCar": "£2.00 - £10.00 (£0 for EV)",
+    "dailyChargeVan": "£2.00 - £10.00 (£0 for EV)",
+    "dailyChargeHGV": "£10.00 (£0 for EV)",
+    "dailyChargeMotorcycle": "£2.00 - £10.00 (£0 for EV)",
+    "pcnAmount": "£60",
+    "pcnDiscounted": "£30",
+    "pcnRule": "PCN is £60, reduced to £30 if paid within 14 days.",
+    "coordinates": {
+      "lat": 51.752,
+      "lng": -1.2577,
+      "zoom": 15
+    },
+    "standards": {
+      "petrol": "Non-EV petrol vehicles must pay the daily emission fee (£10/day)",
+      "diesel": "Non-EV diesel vehicles must pay the daily emission fee (£10/day)",
+      "electric": "100% zero-emission battery electric vehicles (EVs) are completely free (£0)",
+      "hybrid": "Ultra-low emission hybrids (emissions <75g/km) pay £2 - £4; standard hybrids pay £10",
+      "motorcycle": "Zero-emission electric motorbikes free; petrol bikes pay £2 - £10"
+    },
+    "summary": "Oxford ZEZ is the UK's first Zero Emission Zone. 100% electric vehicles are free; all combustion engine vehicles pay £2–£10/day.",
+    "description": "The Oxford Zero Emission Zone (ZEZ) pilot operates across central Oxford streets (including Cornmarket, Queen St, Bonn Square, St Michael's St, and Ship St) from 07:00 to 19:00 daily. Only 100% zero-emission vehicles (pure electric cars and hydrogen) can drive for free. All petrol, diesel, and non-exempt hybrid vehicles must pay a daily charge.",
+    "exemptions": [
+      "100% Zero-emission electric vehicles and hydrogen fuel cell vehicles",
+      "Registered blue badge holders (100% discount upon council registration)",
+      "Designated emergency service and recovery vehicles",
+      "Historic vehicles over 40 years old",
+      "Residents within the ZEZ pilot area receive a 90% discount"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Pure Electric Vehicle (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% exempt from Oxford ZEZ"
+      },
+      {
+        "vehicleType": "Ultra-Low Emission Hybrid (<75g/km)",
+        "isCharged": true,
+        "dailyRate": "£2.00 - £4.00",
+        "notes": "Tiered rate based on CO2 and electric range"
+      },
+      {
+        "vehicleType": "Clean Euro 4/6 Petrol or Diesel",
+        "isCharged": true,
+        "dailyRate": "£10.00",
+        "notes": "Must pay standard daily rate"
+      },
+      {
+        "vehicleType": "Non-Compliant Vehicle",
+        "isCharged": true,
+        "dailyRate": "£10.00",
+        "notes": "Non-compliant standard rate"
+      },
+      {
+        "vehicleType": "Electric Motorcycle",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Free for zero emission"
+      },
+      {
+        "vehicleType": "HGV / Large Commercial",
+        "isCharged": true,
+        "dailyRate": "£10.00",
+        "notes": "Standard daily rate applies"
+      }
+    ],
+    "paymentUrl": "https://www.oxfordshire.gov.uk/residents/roads-and-transport/oxford-zero-emission-zone-zez",
+    "paymentWindow": "Pay up to 6 days before or up to 6 days after the date of travel",
+    "polygon": [
+      [
+        51.7542,
+        -1.2612
+      ],
+      [
+        51.7548,
+        -1.2554
+      ],
+      [
+        51.7512,
+        -1.2538
+      ],
+      [
+        51.7495,
+        -1.2595
+      ],
+      [
+        51.7515,
+        -1.2625
+      ],
+      [
+        51.7542,
+        -1.2612
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Can I drive in Oxford without paying if my car is Euro 6?",
+        "answer": "In the ZEZ pilot streets, even Euro 6 petrol and diesel cars must pay £10. Only 100% pure electric vehicles enter free of charge."
+      }
+    ]
+  },
+  {
+    "id": "glasgow-lez",
+    "slug": "glasgow-lez",
+    "name": "Glasgow Low Emission Zone (LEZ)",
+    "shortName": "Glasgow LEZ",
+    "type": "LEZ_SCOTLAND",
+    "typeLabel": "Scottish Low Emission Zone (LEZ)",
+    "city": "Glasgow",
+    "region": "Scotland",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "ANPR camera enforcement across all city centre entry points",
+    "dailyChargeCar": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeVan": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeHGV": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeMotorcycle": "£0.00 (Exempt)",
+    "pcnAmount": "£60 (Doubles up to £480 / £960)",
+    "pcnDiscounted": "£30",
+    "pcnRule": "PCN is £60 (halved to £30 if paid within 14 days). Penalty doubles for each subsequent breach within 90 days: £120, £240, up to £480 cap for cars/vans, £960 for HGVs.",
+    "coordinates": {
+      "lat": 55.8642,
+      "lng": -4.2518,
+      "zoom": 13
+    },
+    "standards": {
+      "petrol": "Euro 4 (generally registered 2006 onwards)",
+      "diesel": "Euro 6 (generally registered September 2015 onwards)",
+      "electric": "100% Zero-emission vehicles (EVs) permitted freely",
+      "hybrid": "Petrol hybrids Euro 4+; diesel hybrids Euro 6+",
+      "motorcycle": "All two-wheeled mopeds and motorbikes are exempt"
+    },
+    "summary": "Glasgow LEZ enforces a strict ban on non-compliant vehicles with NO daily pay option. Automatic £60 fine issued (doubling up to £480).",
+    "description": "Unlike English Clean Air Zones and London ULEZ, Scottish Low Emission Zones HAVE NO DAILY CHARGE OPTION. Non-compliant vehicles are legally banned from entering Glasgow City Centre (bounded by the M8 motorway and the River Clyde). Drivers of non-compliant vehicles entering the zone receive an automatic statutory Penalty Charge Notice (PCN) of £60, which doubles on each subsequent breach up to £480 for cars/vans.",
+    "exemptions": [
+      "Blue Badge holders (national exemption across all Scottish LEZs - must register beforehand)",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 30 years old (not used for commercial purposes)",
+      "Emergency service and military vehicles",
+      "Showman's vehicles and mopeds/motorcycles"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Compliant Petrol (Euro 4+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Petrol (Pre-2006)",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued (No daily pass)"
+      },
+      {
+        "vehicleType": "Compliant Diesel (Euro 6+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Diesel (Pre-Sept 2015)",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued (No daily pass)"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% permitted with zero emissions"
+      },
+      {
+        "vehicleType": "Motorcycle / Moped",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Mopeds and motorcycles are exempt"
+      }
+    ],
+    "paymentUrl": "https://www.lowemissionzones.scot",
+    "paymentWindow": "No daily pass exists. If issued a PCN, pay within 14 days for 50% discount",
+    "polygon": [
+      [
+        55.8712,
+        -4.2695
+      ],
+      [
+        55.8724,
+        -4.2485
+      ],
+      [
+        55.8654,
+        -4.2385
+      ],
+      [
+        55.8542,
+        -4.2412
+      ],
+      [
+        55.8524,
+        -4.2654
+      ],
+      [
+        55.8585,
+        -4.2754
+      ],
+      [
+        55.8712,
+        -4.2695
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Can I pay a daily fee to drive a non-compliant car in Glasgow?",
+        "answer": "NO. Scottish LEZs have no daily charge option. You cannot pay £12.50 or any other fee to enter. Non-compliant vehicles are strictly banned and will receive an automatic fine."
+      },
+      {
+        "question": "Is the M8 motorway included in the Glasgow LEZ?",
+        "answer": "No. The M8 motorway is excluded from the Glasgow LEZ. However, if you leave the M8 via an off-ramp into the city centre, you immediately enter the LEZ."
+      }
+    ]
+  },
+  {
+    "id": "edinburgh-lez",
+    "slug": "edinburgh-lez",
+    "name": "Edinburgh Low Emission Zone (LEZ)",
+    "shortName": "Edinburgh LEZ",
+    "type": "LEZ_SCOTLAND",
+    "typeLabel": "Scottish Low Emission Zone (LEZ)",
+    "city": "Edinburgh",
+    "region": "Scotland",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "ANPR cameras around Old Town, New Town and city centre perimeter",
+    "dailyChargeCar": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeVan": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeHGV": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeMotorcycle": "£0.00 (Exempt)",
+    "pcnAmount": "£60 (Doubles up to £480 / £960)",
+    "pcnDiscounted": "£30",
+    "pcnRule": "PCN is £60 (halved to £30 if paid within 14 days). Penalty doubles for repeat entries within 90 days up to £480 for cars/vans.",
+    "coordinates": {
+      "lat": 55.9533,
+      "lng": -3.1883,
+      "zoom": 14
+    },
+    "standards": {
+      "petrol": "Euro 4 (generally registered 2006 onwards)",
+      "diesel": "Euro 6 (generally registered September 2015 onwards)",
+      "electric": "100% Zero-emission vehicles (EVs) permitted freely",
+      "hybrid": "Petrol hybrids Euro 4+; diesel hybrids Euro 6+",
+      "motorcycle": "All motorcycles and mopeds are exempt"
+    },
+    "summary": "Edinburgh LEZ covers the City Centre, Old Town and New Town. Non-compliant vehicles are banned (automatic £60 fine, no daily fee).",
+    "description": "Enforcement for Edinburgh's Low Emission Zone began in June 2024. Covering 1.2 square miles of Edinburgh city centre from Queen Street to the Meadows, non-compliant vehicles are prohibited. Scottish LEZ legislation does not permit daily passes; any non-compliant vehicle detected receives an automatic £60 PCN.",
+    "exemptions": [
+      "Blue Badge holders (national Scottish exemption - pre-registration required)",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 30 years old",
+      "Emergency service and military vehicles",
+      "Two-wheeled motorcycles and mopeds"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Compliant Petrol Car (Euro 4+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Petrol Car",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued (No daily pass)"
+      },
+      {
+        "vehicleType": "Compliant Diesel Car (Euro 6+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Diesel Car",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued (No daily pass)"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% permitted"
+      },
+      {
+        "vehicleType": "Motorcycle / Moped",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Exempt"
+      }
+    ],
+    "paymentUrl": "https://www.lowemissionzones.scot",
+    "paymentWindow": "No daily pass. PCN reduced to £30 if paid within 14 days",
+    "polygon": [
+      [
+        55.9585,
+        -3.2112
+      ],
+      [
+        55.9595,
+        -3.1785
+      ],
+      [
+        55.9485,
+        -3.1742
+      ],
+      [
+        55.9412,
+        -3.1895
+      ],
+      [
+        55.9421,
+        -3.2085
+      ],
+      [
+        55.9512,
+        -3.2185
+      ],
+      [
+        55.9585,
+        -3.2112
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "When did Edinburgh LEZ enforcement start?",
+        "answer": "Enforcement in Edinburgh began on 1 June 2024 following a two-year grace period. All non-compliant vehicles are now actively fined."
+      }
+    ]
+  },
+  {
+    "id": "dundee-lez",
+    "slug": "dundee-lez",
+    "name": "Dundee Low Emission Zone (LEZ)",
+    "shortName": "Dundee LEZ",
+    "type": "LEZ_SCOTLAND",
+    "typeLabel": "Scottish Low Emission Zone (LEZ)",
+    "city": "Dundee",
+    "region": "Scotland",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "ANPR cameras around the Inner Ring Road (Marketgait)",
+    "dailyChargeCar": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeVan": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeHGV": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeMotorcycle": "£0.00 (Exempt)",
+    "pcnAmount": "£60 (Doubles up to £480)",
+    "pcnDiscounted": "£30",
+    "pcnRule": "PCN is £60 (halved to £30 if paid within 14 days). Doubles for repeat violations.",
+    "coordinates": {
+      "lat": 56.462,
+      "lng": -2.9707,
+      "zoom": 14
+    },
+    "standards": {
+      "petrol": "Euro 4 (generally registered 2006 onwards)",
+      "diesel": "Euro 6 (generally registered September 2015 onwards)",
+      "electric": "100% Zero-emission vehicles (EVs) permitted freely",
+      "hybrid": "Petrol hybrids Euro 4+; diesel hybrids Euro 6+",
+      "motorcycle": "All motorcycles and mopeds are exempt"
+    },
+    "summary": "Dundee LEZ covers the area inside the Inner Ring Road (Marketgait). Non-compliant vehicles are banned from entering.",
+    "description": "Enforcement for Dundee's Low Emission Zone began on 30 May 2024. The zone is bounded by the A991 Inner Ring Road (Marketgait). The ring road itself, Bell Street car park, and Overgate car park access routes have specific corridor rules. Non-compliant vehicles entering the LEZ receive a £60 PCN.",
+    "exemptions": [
+      "Blue Badge holders (national exemption with pre-registration)",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 30 years old",
+      "Emergency service and military vehicles",
+      "Motorcycles and mopeds"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Compliant Petrol Car (Euro 4+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Petrol Car",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued"
+      },
+      {
+        "vehicleType": "Compliant Diesel Car (Euro 6+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Diesel Car",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% permitted"
+      },
+      {
+        "vehicleType": "Motorcycle / Moped",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Exempt"
+      }
+    ],
+    "paymentUrl": "https://www.lowemissionzones.scot",
+    "paymentWindow": "No daily pass. PCN reduced to £30 if paid within 14 days",
+    "polygon": [
+      [
+        56.4674,
+        -2.9785
+      ],
+      [
+        56.4685,
+        -2.9642
+      ],
+      [
+        56.4621,
+        -2.9585
+      ],
+      [
+        56.4585,
+        -2.9654
+      ],
+      [
+        56.4578,
+        -2.9785
+      ],
+      [
+        56.4625,
+        -2.9825
+      ],
+      [
+        56.4674,
+        -2.9785
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "Is the Dundee Marketgait ring road part of the LEZ?",
+        "answer": "The Inner Ring Road (Marketgait) itself is not inside the LEZ, allowing drivers to bypass the city centre without penalty."
+      }
+    ]
+  },
+  {
+    "id": "aberdeen-lez",
+    "slug": "aberdeen-lez",
+    "name": "Aberdeen Low Emission Zone (LEZ)",
+    "shortName": "Aberdeen LEZ",
+    "type": "LEZ_SCOTLAND",
+    "typeLabel": "Scottish Low Emission Zone (LEZ)",
+    "city": "Aberdeen",
+    "region": "Scotland",
+    "status": "Active",
+    "operatingHours": "24 hours a day, 365 days a year",
+    "enforcementMethod": "ANPR cameras monitoring city centre entry points",
+    "dailyChargeCar": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeVan": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeHGV": "NO DAILY CHARGE - ENTRY BANNED",
+    "dailyChargeMotorcycle": "£0.00 (Exempt)",
+    "pcnAmount": "£60 (Doubles up to £480)",
+    "pcnDiscounted": "£30",
+    "pcnRule": "PCN is £60 (halved to £30 if paid within 14 days). Doubles for repeat violations within 90 days.",
+    "coordinates": {
+      "lat": 57.1497,
+      "lng": -2.0943,
+      "zoom": 14
+    },
+    "standards": {
+      "petrol": "Euro 4 (generally registered 2006 onwards)",
+      "diesel": "Euro 6 (generally registered September 2015 onwards)",
+      "electric": "100% Zero-emission vehicles (EVs) permitted freely",
+      "hybrid": "Petrol hybrids Euro 4+; diesel hybrids Euro 6+",
+      "motorcycle": "All motorcycles and mopeds are exempt"
+    },
+    "summary": "Aberdeen LEZ covers Union Street, Castlegate and central commercial streets. Non-compliant vehicles face automatic £60 fines.",
+    "description": "Enforcement for Aberdeen's Low Emission Zone began on 1 June 2024. The zone covers approximately 0.5 square miles of central Aberdeen, including Union Street, Schoolhill, Skene Street, and Castlegate. Non-compliant vehicles are banned from entering; there is no option to pay a daily pass.",
+    "exemptions": [
+      "Blue Badge holders (national Scottish exemption - registration required)",
+      "Disabled passenger tax class vehicles",
+      "Historic vehicles over 30 years old",
+      "Emergency service and military vehicles",
+      "Motorcycles and mopeds"
+    ],
+    "vehicleCharges": [
+      {
+        "vehicleType": "Compliant Petrol Car (Euro 4+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Petrol Car",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued"
+      },
+      {
+        "vehicleType": "Compliant Diesel Car (Euro 6+)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Permitted to enter freely"
+      },
+      {
+        "vehicleType": "Non-Compliant Diesel Car",
+        "isCharged": true,
+        "dailyRate": "BANNED",
+        "notes": "Automatic £60 PCN issued"
+      },
+      {
+        "vehicleType": "Electric Car (EV)",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "100% permitted"
+      },
+      {
+        "vehicleType": "Motorcycle / Moped",
+        "isCharged": false,
+        "dailyRate": "£0.00",
+        "notes": "Exempt"
+      }
+    ],
+    "paymentUrl": "https://www.lowemissionzones.scot",
+    "paymentWindow": "No daily pass. PCN reduced to £30 if paid within 14 days",
+    "polygon": [
+      [
+        57.1524,
+        -2.1121
+      ],
+      [
+        57.1532,
+        -2.0912
+      ],
+      [
+        57.1478,
+        -2.0885
+      ],
+      [
+        57.1432,
+        -2.0954
+      ],
+      [
+        57.1442,
+        -2.1112
+      ],
+      [
+        57.1495,
+        -2.1154
+      ],
+      [
+        57.1524,
+        -2.1121
+      ]
+    ],
+    "faqs": [
+      {
+        "question": "When did Aberdeen LEZ enforcement begin?",
+        "answer": "Aberdeen LEZ camera enforcement began on 1 June 2024. Non-compliant vehicles are subject to automatic £60 fines."
+      }
+    ]
+  }
+]
