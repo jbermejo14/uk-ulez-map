@@ -89,7 +89,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
     if (cleanVrm.length < 2) {
       setDvlaStatus({
         type: "warning",
-        message: "Por favor, introduce una matrícula válida del Reino Unido (mínimo 2 caracteres).",
+        message: "Please enter a valid UK registration number (at least 2 characters).",
       });
       return;
     }
@@ -132,16 +132,16 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
         else if (typeApp.startsWith("N2") || typeApp.startsWith("N3")) setVehicleType("hgv");
         else setVehicleType("car");
 
-        const formattedDate = new Date(data.queriedAt).toLocaleString("es-ES", {
+        const formattedDate = new Date(data.queriedAt).toLocaleString("en-GB", {
           dateStyle: "medium",
           timeStyle: "short",
         });
 
         setDvlaStatus({
           type: "success",
-          message: `Datos del vehículo: DVLA (${formattedDate})`,
+          message: `Vehicle data: DVLA (${formattedDate})`,
           detail: `${data.data.make || ""} ${data.data.fuelType || ""} • ${
-            data.data.euroStatus ? `Norma Euro registrada: ${data.data.euroStatus}` : "Sin campo euroStatus (estimado por fecha de matriculación)"
+            data.data.euroStatus ? `Registered Euro standard: ${data.data.euroStatus}` : "No euroStatus on record (estimated from registration date)"
           }`,
         });
       } else {
@@ -149,10 +149,10 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
         setDvlaData(null);
         setDvlaQueriedAt(null);
 
-        const errorMsg = !data.success ? data.message : "Error al conectar con la DVLA.";
+        const errorMsg = !data.success ? data.message : "Could not connect to the DVLA.";
         setDvlaStatus({
           type: "info",
-          message: `${errorMsg} Activando modo de estimación manual.`,
+          message: `${errorMsg} Switching to manual estimate mode.`,
         });
       }
     } catch (err) {
@@ -160,7 +160,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
       setDvlaQueriedAt(null);
       setDvlaStatus({
         type: "info",
-        message: "No fue posible conectar con el servicio DVLA. Activando modo de estimación manual.",
+        message: "Could not connect to the DVLA service. Switching to manual estimate mode.",
       });
     } finally {
       setDvlaLoading(false);
@@ -207,18 +207,18 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-primary/10 text-primary border border-primary/20 mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
-                Comprobador de Emisiones & Zonas de Bajas Emisiones UK
+                UK Emissions & Low Emission Zone Checker
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
-                Comprobador de Cumplimiento ULEZ, CAZ y LEZ
+                ULEZ, CAZ and LEZ Compliance Checker
               </h2>
               <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mt-0.5">
-                Consulta los datos del vehículo (mediante DVLA o estimación por matrícula) para verificar tarifas y restricciones en Londres, Escocia y las CAZ de Inglaterra.
+                Look up your vehicle details (via the DVLA or estimated from the number plate) to check charges and restrictions in London, Scotland and England's Clean Air Zones.
               </p>
             </div>
             {/* Quick Test Badges */}
             <div className="hidden lg:flex flex-col items-end gap-1">
-              <span className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium">Ejemplos de prueba:</span>
+              <span className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium">Try an example:</span>
               <div className="flex flex-wrap gap-1.5 justify-end">
                 {presetExamples.slice(0, 3).map((ex) => (
                   <button
@@ -240,7 +240,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
           <div className="md:col-span-5 flex flex-col justify-between">
             <form onSubmit={handleQueryDVLA}>
               <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-2 uppercase tracking-wider">
-                1. Matrícula de Reino Unido (VRM)
+                1. UK registration number (VRM)
               </label>
 
               {/* Realistic UK Rear Yellow Plate */}
@@ -260,7 +260,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                     type="text"
                     value={vrm}
                     onChange={(e) => setVrm(e.target.value.toUpperCase())}
-                    placeholder="ej. AB15 CDE"
+                    placeholder="e.g. AB15 CDE"
                     maxLength={8}
                     className="w-full h-full bg-transparent text-black text-2xl font-black tracking-widest text-center uppercase focus:outline-none placeholder:text-black/35 font-mono"
                   />
@@ -275,11 +275,11 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                   className="flex-1 h-9 px-3 rounded-lg bg-primary hover:bg-primary-hover disabled:opacity-50 text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm transition-all"
                 >
                   {dvlaLoading ? (
-                    <span>Consultando DVLA...</span>
+                    <span>Checking DVLA...</span>
                   ) : (
                     <>
                       <Database className="w-3.5 h-3.5" />
-                      <span>Consultar DVLA (VES)</span>
+                      <span>Look up on DVLA (VES)</span>
                     </>
                   )}
                 </button>
@@ -315,9 +315,9 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                 <div className="mt-2.5 flex items-start gap-2 p-2.5 rounded-lg bg-slate-100 dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800 text-xs text-zinc-700 dark:text-zinc-300">
                   <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-zinc-900 dark:text-white">Estimación por matrícula: </span>
+                    <span className="font-semibold text-zinc-900 dark:text-white">Estimate from number plate: </span>
                     <span>{plateInfo.description}</span>
-                    <span className="block text-[10px] text-zinc-500 mt-0.5">(Modo manual de respaldo; no verificado con DVLA)</span>
+                    <span className="block text-[10px] text-zinc-500 mt-0.5">(Manual fallback mode; not checked with the DVLA)</span>
                   </div>
                 </div>
               )}
@@ -325,7 +325,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
 
             {/* Quick preset mobile buttons */}
             <div className="mt-3 lg:hidden flex flex-wrap gap-1.5 items-center">
-              <span className="text-[11px] text-zinc-500 dark:text-zinc-400">Probar:</span>
+              <span className="text-[11px] text-zinc-500 dark:text-zinc-400">Try:</span>
               {presetExamples.map((ex) => (
                 <button
                   key={ex.reg}
@@ -343,7 +343,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
             {/* Vehicle Type */}
             <div>
               <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-2 uppercase tracking-wider">
-                2. Tipo de Vehículo
+                2. Vehicle type
               </label>
               <select
                 value={vehicleType}
@@ -353,17 +353,17 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                 }}
                 className="w-full h-11 px-3 rounded-lg bg-slate-100 dark:bg-zinc-900 border border-slate-300 dark:border-zinc-700 text-zinc-900 dark:text-white text-sm font-medium focus:border-primary focus:outline-none"
               >
-                <option value="car">Turismo / SUV (Car M1)</option>
-                <option value="van">Furgoneta / LCV (hasta 3.5t N1)</option>
-                <option value="motorcycle">Motocicleta / Ciclomotor</option>
-                <option value="hgv">HGV / Camión / Autobús</option>
+                <option value="car">Car / SUV (M1)</option>
+                <option value="van">Van / LCV (up to 3.5t, N1)</option>
+                <option value="motorcycle">Motorcycle / Moped</option>
+                <option value="hgv">HGV / Lorry / Bus</option>
               </select>
             </div>
 
             {/* Fuel Type */}
             <div>
               <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-2 uppercase tracking-wider">
-                3. Combustible
+                3. Fuel type
               </label>
               <select
                 value={fuelType}
@@ -373,17 +373,17 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                 }}
                 className="w-full h-11 px-3 rounded-lg bg-slate-100 dark:bg-zinc-900 border border-slate-300 dark:border-zinc-700 text-zinc-900 dark:text-white text-sm font-medium focus:border-primary focus:outline-none"
               >
-                <option value="petrol">Gasolina (Petrol)</option>
-                <option value="diesel">Diésel</option>
-                <option value="hybrid">Híbrido (Petrol/Diesel)</option>
-                <option value="electric">Eléctrico (100% EV)</option>
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="hybrid">Hybrid (petrol/diesel)</option>
+                <option value="electric">Electric (100% EV)</option>
               </select>
             </div>
 
             {/* Registration Year */}
             <div>
               <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-2 uppercase tracking-wider">
-                4. Año Matriculación
+                4. Year of registration
               </label>
               <select
                 value={regYear}
@@ -395,7 +395,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
               >
                 {years.map((y) => (
                   <option key={y} value={y}>
-                    {y} {y === 2015 ? "(Sept 2015 Euro 6)" : y === 2006 ? "(Euro 4 gasolina)" : ""}
+                    {y} {y === 2015 ? "(Sept 2015 Euro 6)" : y === 2006 ? "(Euro 4 petrol)" : ""}
                   </option>
                 ))}
               </select>
@@ -404,7 +404,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
             {/* Summary Specification & Certainty Bar */}
             <div className="sm:col-span-3 p-3 rounded-lg bg-slate-100/80 dark:bg-zinc-900/60 border border-slate-200 dark:border-zinc-800 flex flex-wrap items-center justify-between gap-2 text-xs">
               <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                <span className="font-semibold text-zinc-500 dark:text-zinc-400">Norma estimada:</span>
+                <span className="font-semibold text-zinc-500 dark:text-zinc-400">Estimated Euro standard:</span>
                 <span className="font-bold text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/20">
                   {result?.euroStandardEstimate}
                 </span>
@@ -412,18 +412,18 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
 
               {/* Certainty Indicator Badge */}
               <div className="flex items-center gap-1.5">
-                <span className="text-zinc-500 text-[11px]">Nivel de certeza:</span>
+                <span className="text-zinc-500 text-[11px]">Confidence level:</span>
                 {result?.certainty === "confirmado" ? (
                   <span className="px-2 py-0.5 rounded-full font-bold text-[11px] bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
-                    <Check className="w-3 h-3" /> Confirmado (DVLA)
+                    <Check className="w-3 h-3" /> Confirmed (DVLA)
                   </span>
                 ) : result?.certainty === "probable" ? (
                   <span className="px-2 py-0.5 rounded-full font-bold text-[11px] bg-amber-500/20 text-amber-700 dark:text-amber-400 border border-amber-500/30 flex items-center gap-1">
-                    <AlertTriangle className="w-3 h-3" /> Probable (Estimación)
+                    <AlertTriangle className="w-3 h-3" /> Likely (estimate)
                   </span>
                 ) : (
                   <span className="px-2 py-0.5 rounded-full font-bold text-[11px] bg-zinc-500/20 text-zinc-700 dark:text-zinc-400 border border-zinc-500/30 flex items-center gap-1">
-                    <HelpCircle className="w-3 h-3" /> Desconocido
+                    <HelpCircle className="w-3 h-3" /> Unknown
                   </span>
                 )}
               </div>
@@ -459,18 +459,18 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                 <div>
                   <h3 className="font-bold text-base text-zinc-900 dark:text-white">
                     {hasAnyChargeable ? (
-                      <span>Sujeto a tarifas o restricciones en algunas zonas del Reino Unido</span>
+                      <span>Charges or restrictions may apply in some UK zones</span>
                     ) : (
                       <span className="text-emerald-600 dark:text-emerald-500">
-                        100% Cumplimiento estimado en todas las zonas de bajas emisiones
+                        Estimated to comply in all low emission zones
                       </span>
                     )}
                   </h3>
                   <p className="text-xs text-zinc-600 dark:text-zinc-400">
                     {result.dataSource === "dvla" ? (
-                      <span>Datos del vehículo: DVLA ({new Date(result.queriedAt!).toLocaleDateString("es-ES")})</span>
+                      <span>Vehicle data: DVLA ({new Date(result.queriedAt!).toLocaleDateString("en-GB")})</span>
                     ) : (
-                      <span>Estimación basada en año {regYear} y combustible {fuelType.toUpperCase()} (sin verificar en DVLA)</span>
+                      <span>Estimate based on year {regYear} and fuel type {fuelType.toUpperCase()} (not checked with the DVLA)</span>
                     )}
                   </p>
                 </div>
@@ -487,7 +487,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                         : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
                     }`}
                   >
-                    Todas ({result.zonesStatus.length})
+                    All ({result.zonesStatus.length})
                   </button>
                   <button
                     onClick={() => setActiveTab("england")}
@@ -497,7 +497,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                         : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
                     }`}
                   >
-                    Inglaterra
+                    England
                   </button>
                   <button
                     onClick={() => setActiveTab("scotland")}
@@ -507,7 +507,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                         : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
                     }`}
                   >
-                    LEZ Escocia
+                    Scottish LEZs
                   </button>
                 </div>
               )}
@@ -519,7 +519,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
         <div className="px-5 sm:px-6 py-3 bg-amber-50/80 dark:bg-amber-950/20 border-b border-amber-200 dark:border-amber-900/40 text-xs text-amber-900 dark:text-amber-300 flex items-start gap-2.5">
           <AlertCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
           <div className="leading-relaxed">
-            <strong>Aviso legal importante:</strong> El resultado de este comprobador es meramente orientativo. Existen exenciones locales (tarjeta Blue Badge, residentes, vehículos históricos o adaptaciones técnicas homologadas) que no se comprueban en esta herramienta. La decisión final y vinculante corresponde exclusivamente a Transport for London (TfL) o al ayuntamiento operador de cada zona. Verifica siempre en el comprobador oficial correspondiente antes de circular.
+            <strong>Important legal notice:</strong> The result of this checker is indicative only. Local exemptions (Blue Badge, residents' discounts, historic vehicles or approved technical adaptations) are not checked by this tool. The final and binding decision rests solely with Transport for London (TfL) or the council that operates each zone. Always check with the relevant official checker before you travel.
           </div>
         </div>
 
@@ -568,14 +568,14 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
 
                   {/* Certainty Tag & Warning for Non-Confirmed */}
                   <div className="mb-3 flex items-center gap-1.5 text-[11px]">
-                    <span className="text-zinc-400">Certeza:</span>
+                    <span className="text-zinc-400">Confidence:</span>
                     {z.certainty === "confirmado" ? (
                       <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
-                        <Check className="w-3 h-3" /> Confirmado con DVLA
+                        <Check className="w-3 h-3" /> Confirmed with DVLA
                       </span>
                     ) : (
                       <span className="text-amber-600 dark:text-amber-400 font-semibold flex items-center gap-1">
-                        <AlertTriangle className="w-3 h-3" /> {z.certainty === "probable" ? "Probable (estimado)" : "Desconocido"}
+                        <AlertTriangle className="w-3 h-3" /> {z.certainty === "probable" ? "Likely (estimated)" : "Unknown"}
                       </span>
                     )}
                   </div>
@@ -589,9 +589,9 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-1.5 px-2.5 rounded bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-800 dark:text-amber-300 font-semibold flex items-center justify-between transition-colors"
-                      title={`Comprobar en el portal oficial de ${z.zoneName}`}
+                      title={`Check on the official portal for ${z.zoneName}`}
                     >
-                      <span>Verificar en {z.officialCheckerName}</span>
+                      <span>Check with {z.officialCheckerName}</span>
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   )}
@@ -602,7 +602,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                       href={`/zone/${z.slug}`}
                       className="text-primary hover:text-primary-hover font-semibold inline-flex items-center gap-1 flex-shrink-0"
                     >
-                      Guía <ArrowRight className="w-3 h-3" />
+                      Guide <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
                 </div>
@@ -620,15 +620,15 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
               <div className="max-w-2xl">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-primary text-white mb-2">
                   <TrendingUp className="w-3 h-3" />
-                  Verificación de Historial y Valoración de Vehículo
+                  Vehicle History Check & Valuation
                 </div>
                 <h4 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-white tracking-tight">
                   {hasAnyChargeable
-                    ? "¿Vehículo con tarifas o restricciones en zonas de bajas emisiones?"
-                    : "Comprueba la norma Euro exacta y el historial completo del vehículo"}
+                    ? "Vehicle facing charges or restrictions in low emission zones?"
+                    : "Check the exact Euro standard and full history of the vehicle"}
                 </h4>
                 <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                  Evita multas de £180 en ULEZ y sanciones automáticas de £60 en Escocia. Revisa los datos de emisiones del libro de registro V5C o solicita una tasación gratuita para cambiar a un vehículo 100% conforme.
+                  Avoid £180 ULEZ penalty charges and automatic £60 penalties in Scotland. Check the emissions details on your V5C logbook or request a free valuation to switch to a fully compliant vehicle.
                 </p>
               </div>
 
@@ -640,7 +640,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                   rel="noopener noreferrer sponsored"
                   className="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white border border-slate-300 dark:border-zinc-700 flex items-center justify-center gap-2 transition-all shadow-sm"
                 >
-                  <span>Historial del Vehículo (HPI)</span>
+                  <span>Vehicle History (HPI)</span>
                   <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
                 </a>
 
@@ -650,7 +650,7 @@ export default function VehicleChecker({ preselectedZoneSlug, className = "" }: 
                   rel="noopener noreferrer sponsored"
                   className="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-bold bg-primary hover:bg-primary-hover text-white shadow-md shadow-primary/25 flex items-center justify-center gap-2 transition-all"
                 >
-                  <span>Tasar Mi Coche &rarr;</span>
+                  <span>Value My Car &rarr;</span>
                 </a>
               </div>
             </div>

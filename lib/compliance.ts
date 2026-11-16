@@ -244,12 +244,12 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
 
   const getCertaintyNote = (zoneCertainty: CertaintyLevel): string => {
     if (zoneCertainty === "confirmado") {
-      return "Confirmado con datos oficiales de la DVLA.";
+      return "Confirmed using DVLA records.";
     }
     if (zoneCertainty === "probable") {
-      return "Resultado probable basado en fecha de matriculación. Verifica en el comprobador oficial antes de viajar.";
+      return "Likely result based on the registration date. Check with the official operator's checker before you travel.";
     }
-    return "Resultado desconocido o con exenciones no verificadas. Comprueba en el portal oficial.";
+    return "Result unknown, or exemptions have not been checked. Check on the official portal.";
   };
 
   const zonesStatus: ZoneStatusResult[] = [
@@ -281,7 +281,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
         ? "Eligible for 100% Cleaner Vehicle Discount (must register with TfL). Free entry 7am-6pm Mon-Fri & 12pm-6pm Sat-Sun."
         : "Standard £15 daily charge applies to ALL combustion and hybrid vehicles entering Central London 07:00-18:00 Mon-Fri, 12:00-18:00 Sat-Sun.",
       certainty: isElectric && isFromDVLA ? "confirmado" : "probable",
-      certaintyNote: isElectric ? "Requiere registro previo con TfL para aplicar el descuento del 100%." : getCertaintyNote("probable"),
+      certaintyNote: isElectric ? "You must register with TfL beforehand to receive the 100% discount." : getCertaintyNote("probable"),
       officialCheckerUrl: TFL_CHECKER,
       officialCheckerName: "TfL Congestion Charge Portal",
     },
@@ -330,7 +330,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
         ? "Private passenger cars are completely EXEMPT from Bath Clean Air Zone charges regardless of fuel type or age."
         : (isStandardUlezCompliant ? "Commercial vehicle meets Euro standards." : "Non-compliant commercial van/taxi subject to £9 daily charge. HGVs pay £100."),
       certainty: vehicleType === "car" ? "confirmado" : overallCertainty,
-      certaintyNote: vehicleType === "car" ? "Exención permanente para turismos privados." : getCertaintyNote(overallCertainty),
+      certaintyNote: vehicleType === "car" ? "Permanent exemption for private cars." : getCertaintyNote(overallCertainty),
       officialCheckerUrl: GOVUK_CAZ_CHECKER,
       officialCheckerName: "Gov.uk Clean Air Zones Checker",
     },
@@ -347,7 +347,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
         ? "Private passenger cars and motorbikes are EXEMPT in Sheffield. Only commercial vans, taxis, buses, and HGVs are charged."
         : (isStandardUlezCompliant ? "Commercial vehicle meets Euro standards." : "Non-compliant van or taxi must pay £10/day (£50 for HGVs) via gov.uk."),
       certainty: vehicleType === "car" ? "confirmado" : overallCertainty,
-      certaintyNote: vehicleType === "car" ? "Exención permanente para turismos privados." : getCertaintyNote(overallCertainty),
+      certaintyNote: vehicleType === "car" ? "Permanent exemption for private cars." : getCertaintyNote(overallCertainty),
       officialCheckerUrl: GOVUK_CAZ_CHECKER,
       officialCheckerName: "Gov.uk Clean Air Zones Checker",
     },
@@ -364,7 +364,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
         ? "Private cars and motorbikes are EXEMPT from Newcastle & Gateshead CAZ charges."
         : (isStandardUlezCompliant ? "Commercial vehicle compliant." : "Non-compliant older commercial vans/taxis pay £12.50/day. HGVs pay £50/day."),
       certainty: vehicleType === "car" ? "confirmado" : overallCertainty,
-      certaintyNote: vehicleType === "car" ? "Exención permanente para turismos privados." : getCertaintyNote(overallCertainty),
+      certaintyNote: vehicleType === "car" ? "Permanent exemption for private cars." : getCertaintyNote(overallCertainty),
       officialCheckerUrl: GOVUK_CAZ_CHECKER,
       officialCheckerName: "Gov.uk Clean Air Zones Checker",
     },
@@ -381,7 +381,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
         ? "Private cars are not charged in Bradford. Only commercial vehicles, vans, minibuses, and HGVs."
         : (isStandardUlezCompliant ? "Commercial vehicle meets emission criteria." : "Non-compliant commercial vehicle pays £9/day (£50 for HGVs)."),
       certainty: vehicleType === "car" ? "confirmado" : overallCertainty,
-      certaintyNote: vehicleType === "car" ? "Exención permanente para turismos privados." : getCertaintyNote(overallCertainty),
+      certaintyNote: vehicleType === "car" ? "Permanent exemption for private cars." : getCertaintyNote(overallCertainty),
       officialCheckerUrl: GOVUK_CAZ_CHECKER,
       officialCheckerName: "Gov.uk Clean Air Zones Checker",
     },
@@ -396,7 +396,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
       statusText: vehicleType === "car" || vehicleType === "van" ? "Exempt (Cars & Vans Free)" : (isStandardUlezCompliant ? "Compliant (No Charge)" : "Chargeable"),
       details: "Portsmouth is Class B: Private cars and standard private vans are 100% exempt. Only non-compliant taxis, private hire, and HGVs/buses pay.",
       certainty: (vehicleType === "car" || vehicleType === "van") ? "confirmado" : overallCertainty,
-      certaintyNote: (vehicleType === "car" || vehicleType === "van") ? "Exención de Clase B para turismos y furgonetas privadas." : getCertaintyNote(overallCertainty),
+      certaintyNote: (vehicleType === "car" || vehicleType === "van") ? "Class B exemption for private cars and vans." : getCertaintyNote(overallCertainty),
       officialCheckerUrl: GOVUK_CAZ_CHECKER,
       officialCheckerName: "Gov.uk Clean Air Zones Checker",
     },
@@ -412,7 +412,7 @@ export function checkVehicleCompliance(opts: CheckOptions): ComplianceResult {
         ? "100% pure battery electric vehicles enter the Oxford ZEZ completely free of charge."
         : "All petrol, diesel, and non-EV hybrid vehicles must pay £10/day between 07:00 and 19:00 to drive on designated city centre streets.",
       certainty: isElectric && isFromDVLA ? "confirmado" : "probable",
-      certaintyNote: isElectric ? "100% libre de emisiones verificado." : "Solo vehículos 100% eléctricos están exentos de pago en la ZEZ de Oxford.",
+      certaintyNote: isElectric ? "Confirmed zero emission vehicle." : "Only 100% electric vehicles are exempt from charges in the Oxford ZEZ.",
       officialCheckerUrl: OXFORD_ZEZ_PORTAL,
       officialCheckerName: "Oxfordshire County Council ZEZ",
     },

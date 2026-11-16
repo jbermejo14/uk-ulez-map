@@ -2,6 +2,8 @@
 
 UKCleanZone es una aplicación web rápida, minimalista y responsive para consultar el cumplimiento y las tarifas de las 14 zonas de bajas emisiones del Reino Unido (London ULEZ, Congestion Charge, Clean Air Zones de Inglaterra y LEZ de Escocia).
 
+**Idioma:** la documentación está en español (uso interno), pero toda la web (interfaz, metadatos, mensajes de error de la API y avisos) está en inglés británico. La prueba `test/ui-language.test.ts` falla si aparecen textos típicos del español en `app/`, `components/` o `lib/compliance.ts`.
+
 ---
 
 ## 1. Obtención de la Clave de la API DVLA (Vehicle Enquiry Service - VES)

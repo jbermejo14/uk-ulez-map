@@ -154,24 +154,24 @@ export default function ZonePage({ params }: ZonePageProps) {
               Status: {zone.status}
             </span>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-slate-300 dark:border-zinc-700">
-              Verificado: {zone.lastVerified}
+              Last checked: {zone.lastVerified}
             </span>
             <a
               href={zone.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary hover:underline flex items-center gap-1 border border-primary/20"
-              title="Consultar fuente oficial del operador"
+              title="View the operator's official source"
             >
-              <span>Fuente Oficial</span>
+              <span>Official source</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>
 
           {zone.unverifiedFields && zone.unverifiedFields.length > 0 && (
             <div className="mb-4 p-3 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-300 dark:border-amber-700/50 text-xs text-amber-800 dark:text-amber-300 flex items-center gap-2">
-              <span className="font-bold">Nota de verificación:</span>
-              <span>Campos pendientes de confirmación oficial: {zone.unverifiedFields.join(", ")}</span>
+              <span className="font-bold">Verification note:</span>
+              <span>Details awaiting official confirmation: {zone.unverifiedFields.join(", ")}</span>
             </div>
           )}
 
@@ -221,7 +221,7 @@ export default function ZonePage({ params }: ZonePageProps) {
             <div>
               <h2 className="text-lg sm:text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-primary" />
-                {zone.name} Official Boundary Map
+                {zone.name} Boundary Map
               </h2>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
                 Camera-monitored perimeter. Vehicles entering within this orange boundary are captured by ANPR.
